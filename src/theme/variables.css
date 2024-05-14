@@ -1,0 +1,11 @@
+/* For information on how to create your own theme, please see:
+http://ionicframework.com/docs/theming/ */
+
+.ion-padding-start {
+  padding-left: 10px;
+}
+
+ion-searchbar {
+    max-width: 600px;
+    margin-left: auto;
+}
