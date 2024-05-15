@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Email, getEmails } from '../data/emails';
+import { useHistory } from 'react-router-dom'; // Import useHistory hook
+
 import {
     IonButton,
     IonButtons,
@@ -14,12 +16,12 @@ import {
     IonSearchbar,
     IonTitle,
     IonToolbar,
+    IonNavLink,
     useIonViewWillEnter
 } from '@ionic/react';
 import EmailList from '../components/EmailList';
 import './Inbox.css';
-import { arrowBack, searchOutline } from 'ionicons/icons';
-import NewEmailButton from '../components/NewEmailButton';
+import { arrowBack, searchOutline, fingerPrintOutline } from 'ionicons/icons';
 import ToolBar_Footer from "../components/ToolBar_Footer";
 
 const Inbox: React.FC = () => {
@@ -27,6 +29,9 @@ const Inbox: React.FC = () => {
     const [allEmails, setAllEmails] = useState<Email[]>([]); // State to hold all emails ( used for filtering in search )
     const [searchText, setSearchText] = useState(''); // State to hold the search text
     const [showSearch, setShowSearch] = useState(false); // State to toggle the search bar
+
+    const history = useHistory(); // Use useHistory hook
+
 
     useIonViewWillEnter(() => {
         const mails = getEmails();
@@ -53,6 +58,7 @@ const Inbox: React.FC = () => {
         }, 3000);
     }; // This function will run when the user pulls down to refresh the page
 
+
     const handleSearchToggle = () => {
         setShowSearch(!showSearch);
         if (showSearch) {
@@ -60,9 +66,6 @@ const Inbox: React.FC = () => {
         }
     }; // This function will toggle the search bar
 
-    const handleCreateEmail = () => {
-        console.log('Create new email');
-    };
 
     const handleDelete = (emailId: number) => {
         console.log('Deleting email with ID:', emailId);
@@ -71,6 +74,10 @@ const Inbox: React.FC = () => {
     const handleArchive = (emailId: number) => {
         console.log('Archiving email with ID:', emailId);
     };
+
+    const handleFingerprintClick = () => {
+        history.push('/UserAccount');
+    }
 
     return (
         <IonPage id="main">
@@ -87,7 +94,7 @@ const Inbox: React.FC = () => {
                             <IonSearchbar
                                 value={searchText}
                                 onIonChange={(e) => setSearchText(e.detail.value!)}
-                                placeholder="Search emails"
+                                placeholder="PCC"
                             />
                         </>
                     ) : (
@@ -100,6 +107,14 @@ const Inbox: React.FC = () => {
                                 <IonButton onClick={handleSearchToggle}>
                                     <IonIcon icon={searchOutline}/>
                                 </IonButton>
+
+
+                                <IonButton onClick={handleFingerprintClick}>
+                                    <IonIcon icon={fingerPrintOutline}/>
+                                </IonButton>
+
+
+
                             </IonButtons>
                         </>
                     )}
@@ -119,21 +134,21 @@ const Inbox: React.FC = () => {
                 </IonHeader>
                 <IonContent scrollY={false}>
 
-                <div className="ion-content-scroll-host ion-padding">
+                    <div className="ion-content-scroll-host ion-padding">
 
-                    {/* Our list of emails ( each email is an EmailList component  */}
-                    <IonList lines='full' className='ion-no-padding'>
-                        {emails.map(email => <EmailList key={email.id} email={email} handleDelete={handleDelete}
-                                                        handleArchive={handleArchive}/>)}
-                    </IonList>
-                </div>
+                        {/* Our list of emails ( each email is an EmailList component  */}
+                        <IonList lines='full' className='ion-no-padding'>
+                            {emails.map(email => <EmailList key={email.id} email={email} handleDelete={handleDelete}
+                                                            handleArchive={handleArchive}/>)}
+                        </IonList>
+                    </div>
                 </IonContent>
             </IonContent>
             <ToolBar_Footer/>
         </IonPage>
 
 
-);
+    );
 };
 
 export default Inbox;

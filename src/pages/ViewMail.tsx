@@ -42,7 +42,7 @@ function ViewMail() {
                 {email ? (
                     <>
                         <IonItem>
-                            <IonIcon aria-hidden="true" icon={personCircle} color="primary"></IonIcon>
+                            <IonIcon aria-hidden="true" icon={personCircle} color="Medium"></IonIcon>
                             <IonLabel className="ion-text-wrap">
                                 <h2>
                                     {email.from}

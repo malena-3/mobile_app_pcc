@@ -1,0 +1,25 @@
+/* Inbox.css */
+.searchbar-container {
+    display: flex;
+    align-items: center;
+    transition: max-height 5.3s ease, opacity 50.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.searchbar-container.show {
+    max-height: 70px; /* Adjust based on your search bar height */
+    opacity: 1;
+}
+
+.toolbar-title {
+    transition: opacity 0.3s ease;
+}
+
+.toolbar-title.hidden {
+    opacity: 0;
+}
+
+
+

@@ -3,6 +3,8 @@ import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/r
 import { IonReactRouter } from '@ionic/react-router';
 import Inbox from './pages/Inbox';
 import ViewMail from './pages/ViewMail';
+import UserAccount from './pages/UserAccount';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -55,6 +57,9 @@ const App: React.FC = () => (
             {/* Mail page to view a single email */}
             <ViewMail />
           </Route>
+
+          <Route exact path="/UserAccount" component={UserAccount} />
+
         </IonRouterOutlet>
       </IonSplitPane>
     </IonReactRouter>
