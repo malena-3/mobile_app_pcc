@@ -23,6 +23,9 @@ import EmailList from '../components/EmailList';
 import './Inbox.css';
 import { arrowBack, searchOutline, fingerPrintOutline } from 'ionicons/icons';
 import ToolBar_Footer from "../components/ToolBar_Footer";
+import customIcon from '../pages/daveSelfie.jpeg'; // Import the custom icon
+
+
 
 const Inbox: React.FC = () => {
     const [emails, setEmails] = useState<Email[]>([]); // State to hold our emails
@@ -75,7 +78,7 @@ const Inbox: React.FC = () => {
         console.log('Archiving email with ID:', emailId);
     };
 
-    const handleFingerprintClick = () => {
+    const handleIconClick = () => {
         history.push('/UserAccount');
     }
 
@@ -109,9 +112,10 @@ const Inbox: React.FC = () => {
                                 </IonButton>
 
 
-                                <IonButton onClick={handleFingerprintClick}>
-                                    <IonIcon icon={fingerPrintOutline}/>
+                                <IonButton onClick={handleIconClick}>
+                                    <img src={customIcon} alt="Custom Icon" style={{ width: '45px', height: '45px', borderRadius: '50%' }}/>
                                 </IonButton>
+
 
 
 

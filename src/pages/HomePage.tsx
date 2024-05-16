@@ -1,6 +1,4 @@
 import React from 'react';
-import {useHistory} from "react-router-dom";
-
 import {
     IonPage,
     IonHeader,
@@ -15,25 +13,20 @@ import {
 import {logOut, arrowBackCircleOutline, person} from "ionicons/icons";
 import ToolBar_Footer from "../components/ToolBar_Footer";
 
-const UserAccount: React.FC = () => {
+const HomePage: React.FC = () => {
 
-const history = useHistory();
-
-    const handleReturnButtonClick = () =>
-    {
-        history.push('/HomePage');
-    }
 
     return (
         <IonPage>
             <IonHeader>
-                <IonToolbar>
-                    <IonTitle color="danger">
-                        My Account
+                <IonToolbar color="danger">
+                    <IonTitle color="light">
+                        Home
                     </IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent>
+
 
                 <h2>Welcome to the User Account page!</h2>
                 {/* Add more content here */}
@@ -43,4 +36,4 @@ const history = useHistory();
     );
 };
 
-export default UserAccount;
+export default HomePage;

@@ -4,11 +4,23 @@ import {logOut, mail, create, home, notifications, person} from "ionicons/icons"
 
 import { useHistory} from "react-router-dom";
 
-import "./Menu.css";
+import "./ToolBar_Footer.css";
 
 function ToolBarFooter() {
     const history = useHistory();
 
+    const handleMailClick = () =>
+    {
+        history.push('/Inbox');
+    }
+    const handleCanvasClick = () =>
+    {
+        history.push('/Canvas');
+    }
+    const handleHomeClick = () =>
+    {
+        history.push('/HomePage');
+    }
     const handleUserAccountClick = () =>
     {
         history.push('/UserAccount');
@@ -17,15 +29,19 @@ function ToolBarFooter() {
         <>
             <IonFooter collapse="fade">
                 <IonToolbar color="danger">
-                    <IonButton fill = "clear">
+
+                    <IonButton onClick={handleMailClick} fill = "clear">
                         <IonIcon color="light" icon={mail}> </IonIcon>
                     </IonButton>
-                    <IonButton fill = "clear">
+
+                    <IonButton onClick={handleCanvasClick} fill = "clear">
                         <IonIcon color="light" icon={create}> </IonIcon>
                     </IonButton>
-                    <IonButton fill= "clear">
+
+                    <IonButton onClick={handleHomeClick} fill= "clear">
                         <IonIcon color="light" icon={home}> </IonIcon>
                     </IonButton>
+
                     <IonButton fill="clear">
                         <IonIcon color="light" icon={notifications}> </IonIcon>
                     </IonButton>

@@ -4,6 +4,8 @@ import { IonReactRouter } from '@ionic/react-router';
 import Inbox from './pages/Inbox';
 import ViewMail from './pages/ViewMail';
 import UserAccount from './pages/UserAccount';
+import HomePage from './pages/HomePage';
+import Canvas from './pages/Canvas';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -59,6 +61,8 @@ const App: React.FC = () => (
           </Route>
 
           <Route exact path="/UserAccount" component={UserAccount} />
+          <Route exact path="/HomePage" component={HomePage} />
+          <Route exact path="/Canvas" component={Canvas} />
 
         </IonRouterOutlet>
       </IonSplitPane>
