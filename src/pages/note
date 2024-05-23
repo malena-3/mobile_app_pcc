@@ -1,0 +1,77 @@
+/*
+import React, { useRef, useEffect, useState } from 'react';
+import {IonDatetime} from "@ionic/react";
+import {useHistory} from "react-router-dom";
+import {
+    IonPage,
+    IonRow,
+    IonCol,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonIcon,
+    IonButton,
+
+} from '@ionic/react';
+import { calendarOutline, fingerPrintOutline } from "ionicons/icons";
+import ToolBar_Footer from "../components/ToolBar_Footer";
+import './Canvas.css';
+import customIcon from "./daveSelfie.jpeg"; // Import the CSS file
+
+const Canvas: React.FC = () => {
+    const datetime = useRef<null | HTMLIonDatetimeElement>(null);
+
+    const history = useHistory();
+    const [showFilter, setShowFilter] = useState(false);
+
+
+    useEffect(() => {
+        if (!datetime.current) return;
+        datetime.current.value = ['2022-06-03', '2022-06-13', '2022-06-29'];
+    }, []);
+
+    const handleCalenderClick = () =>
+    {
+        history.push('/CanvasCalendar');
+    }
+
+    const handleIconClick = () => {
+        history.push('/UserAccount');
+    }
+
+
+
+    return (
+        <IonPage>
+            <IonHeader>
+                <IonToolbar color="danger">
+                    <IonTitle color="light">
+                            Canvas
+                        <IonButton onClick={handleCalenderClick} fill="clear" color="light">
+                        <IonIcon icon={calendarOutline} style={{ marginLeft: '100px', fontSize: '25px' }} />
+                        </IonButton>
+
+                        <IonButton onClick={handleIconClick} fill='clear'>
+                            <img src={customIcon} alt="Custom Icon" style={{ marginLeft: '10px', width: '45px', height: '45px', borderRadius: '50%' }}/>
+                        </IonButton>
+
+                    </IonTitle>
+                </IonToolbar>
+            </IonHeader>
+
+            <IonContent>
+
+
+
+
+            </IonContent>
+
+
+            <ToolBar_Footer/>
+        </IonPage>
+    );
+};
+
+export default Canvas;
+*/

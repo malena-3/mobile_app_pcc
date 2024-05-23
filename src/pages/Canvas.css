@@ -1,17 +1,25 @@
-ion-icon{
-    font-size: 20px;
 
+/*
+:root {
+    --ion-color-tertiary: #FFCC00;
+    --ion-color-success: #10DC60;
+    --ion-color-primary: #3880FF;
 }
+
+ion-icon {
+    font-size: 20px;
+}
+
 .full-screen-datetime {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Optional: remove any border if exists */
-    margin: 0; /* Optional: remove any margin if exists */
+    border: none;
+    margin: 0;
     margin-left: 12px;
-    padding: 0; /* Optional: remove any padding if exists */
+    padding: 0;
 
     --ion-color-primary: #bf2121;
     --ion-color-primary-rgb: 255, 99, 71;
@@ -26,6 +34,10 @@ ion-icon{
     height: 100%;
 }
 
+ion-title {
+
+}
+
 .button-wrapper {
     margin-top: 500px;
     margin-bottom: 16px;
@@ -37,4 +49,117 @@ ion-icon{
 .custom-button {
     font-size: 18px;
     text-transform: none;
+}
+
+.full-screen-datetime ion-item {
+    position: relative;
+}
+
+.full-screen-datetime .highlighted-date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.highlight-tertiary {
+    background-color: var(--ion-color-tertiary);
+
+}
+
+.highlight-success {
+    background-color: var(--ion-color-success);
+}
+
+.highlight-primary {
+    background-color: var(--ion-color-primary);
+}
+*/
+/* Define colors */
+:root {
+    --ion-color-tertiary: #FFCC00;  /* Example color */
+    --ion-color-success: #10DC60;   /* Example color */
+    --ion-color-primary: #3880FF;   /* Example color */
+}
+
+/* Set icon size */
+ion-icon {
+    font-size: 20px;
+}
+
+/* Full screen datetime picker */
+.full-screen-datetime {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    margin-left: 12px;
+    padding: 0;
+
+    --ion-color-primary: #bf2121;
+    --ion-color-primary-rgb: 255, 99, 71;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-tint: #fc9595;
+}
+
+/* Wrapper for ion-content */
+.ion-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Styles for ion-title */
+ion-title {
+    /* Add any styles for ion-title here */
+}
+
+/* Wrapper for buttons */
+.button-wrapper {
+    margin-top: 500px; /* Adjust this margin as needed */
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    color: #bf2121;
+}
+
+/* Custom button style */
+.custom-button {
+    font-size: 18px;
+    text-transform: none;
+}
+
+/* Styling for dots */
+.full-screen-datetime ion-item {
+    position: relative;
+}
+
+.full-screen-datetime .highlighted-date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px; /* Adjust dot size as needed */
+    height: 10px; /* Adjust dot size as needed */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Define colors for highlighted dates */
+.highlight-tertiary {
+    background-color: var(--ion-color-tertiary);
+}
+
+.highlight-success {
+    background-color: var(--ion-color-success);
+}
+
+.highlight-primary {
+    background-color: var(--ion-color-primary);
 }

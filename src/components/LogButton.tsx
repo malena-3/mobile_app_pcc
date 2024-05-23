@@ -1,13 +1,28 @@
+
 import React from 'react';
-import { IonFab, IonFabButton, IonIcon } from '@ionic/react';
+import {IonButton, IonFab, IonFabButton, IonIcon} from '@ionic/react';
+
+
+import { useHistory} from "react-router-dom";
+
 
 import './Menu.css';
-import {logOutOutline, logOut} from "ionicons/icons";
+import {logOutOutline, logOut, create} from "ionicons/icons";
 
 function LogButton() {
+
+    const history = useHistory();
+
+    const handleLogOut = () =>
+    {
+        history.push('/LogOutScreen');
+    }
+
     return (
+
+
         <IonFab slot="fixed" vertical="top" horizontal="center">
-            <IonFabButton color="light">
+            <IonFabButton onClick={handleLogOut} color="light">
                 <IonIcon color="danger" icon={logOut}> </IonIcon>
                 Log Out
             </IonFabButton>

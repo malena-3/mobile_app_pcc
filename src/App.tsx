@@ -6,7 +6,8 @@ import ViewMail from './pages/ViewMail';
 import UserAccount from './pages/UserAccount';
 import HomePage from './pages/HomePage';
 import Canvas from './pages/Canvas';
-
+import LogOutScreen from './pages/LogOutScreen';
+import CanvasCalendar from "./components/CanvasCalendar";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -63,6 +64,8 @@ const App: React.FC = () => (
           <Route exact path="/UserAccount" component={UserAccount} />
           <Route exact path="/HomePage" component={HomePage} />
           <Route exact path="/Canvas" component={Canvas} />
+          <Route exact path="/LogOutScreen" component={LogOutScreen} />
+          <Route exact path="/CanvasCalendar" component={CanvasCalendar} />
 
         </IonRouterOutlet>
       </IonSplitPane>

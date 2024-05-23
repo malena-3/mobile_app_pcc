@@ -1,58 +1,59 @@
+
 import React from 'react';
-import {IonButton, IonFooter, IonIcon, IonTitle, IonToolbar} from '@ionic/react';
-import {logOut, mail, create, home, notifications, person} from "ionicons/icons";
-
-import { useHistory} from "react-router-dom";
-
-import "./ToolBar_Footer.css";
+import { IonButton, IonFooter, IonIcon, IonToolbar } from '@ionic/react';
+import { mailOutline, mailOpen, create, createOutline, home, homeOutline, notifications, notificationsOutline, person, personOutline } from 'ionicons/icons';
+import { useHistory, useLocation } from 'react-router-dom';
+import './ToolBar_Footer.css';
 
 function ToolBarFooter() {
     const history = useHistory();
+    const location = useLocation();
 
-    const handleMailClick = () =>
-    {
+    const handleMailClick = () => {
         history.push('/Inbox');
-    }
-    const handleCanvasClick = () =>
-    {
+    };
+
+    const handleCanvasClick = () => {
         history.push('/Canvas');
-    }
-    const handleHomeClick = () =>
-    {
+    };
+
+    const handleHomeClick = () => {
         history.push('/HomePage');
-    }
-    const handleUserAccountClick = () =>
-    {
+    };
+
+    const handleUserAccountClick = () => {
         history.push('/UserAccount');
-    }
+    };
+
+    const isActive = (path: string): boolean => location.pathname === path;
+
     return (
         <>
             <IonFooter collapse="fade">
                 <IonToolbar color="danger">
-
-                    <IonButton onClick={handleMailClick} fill = "clear">
-                        <IonIcon color="light" icon={mail}> </IonIcon>
+                    <IonButton onClick={handleMailClick} color="danger" fill="clear">
+                        <IonIcon icon={isActive('/Inbox') ? mailOpen : mailOutline} color="light" />
                     </IonButton>
 
-                    <IonButton onClick={handleCanvasClick} fill = "clear">
-                        <IonIcon color="light" icon={create}> </IonIcon>
+                    <IonButton onClick={handleCanvasClick} color="danger" fill="clear">
+                        <IonIcon icon={isActive('/Canvas') ? create : createOutline} color="light" />
                     </IonButton>
 
-                    <IonButton onClick={handleHomeClick} fill= "clear">
-                        <IonIcon color="light" icon={home}> </IonIcon>
+                    <IonButton onClick={handleHomeClick} color="danger" fill="clear">
+                        <IonIcon icon={isActive('/HomePage') ? home : homeOutline} color="light" />
                     </IonButton>
 
-                    <IonButton fill="clear">
-                        <IonIcon color="light" icon={notifications}> </IonIcon>
+                    <IonButton color="danger" fill="clear">
+                        <IonIcon icon={isActive('/Notifications') ? notifications : notificationsOutline} color="light" />
                     </IonButton>
 
-                    <IonButton onClick={handleUserAccountClick} fill= "clear">
-                        <IonIcon color="light" icon={person}/>
+                    <IonButton onClick={handleUserAccountClick} color="danger" fill="clear">
+                        <IonIcon icon={isActive('/UserAccount') ? person : personOutline} color="light" />
                     </IonButton>
-
                 </IonToolbar>
             </IonFooter>
         </>
     );
 }
+
 export default ToolBarFooter;

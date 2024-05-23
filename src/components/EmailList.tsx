@@ -47,6 +47,7 @@ const EmailList: React.FC<EmailListProps> = ({ email, handleDelete, handleArchiv
                             {email.message}
                         </p>
                     </IonLabel>
+                    
                     <div className="metadata-end-wrapper" slot="end">
                         <IonNote color="medium">{email.date}</IonNote>
                         <IonIcon color="medium" icon={chevronForward}></IonIcon>

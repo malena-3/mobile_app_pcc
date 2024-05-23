@@ -13,9 +13,12 @@ import {
     IonSegment,
     IonSegmentButton,
     IonToolbar,
+    IonFab,
+    IonFabButton,
+    IonFabList,
     useIonViewWillEnter,
 } from '@ionic/react';
-import { personCircle } from 'ionicons/icons';
+import { personCircle, openOutline} from 'ionicons/icons';
 import { useParams } from 'react-router';
 import './ViewMail.css';
 
@@ -100,6 +103,13 @@ function ViewMail() {
                 ) : (
                     <div>Email not found</div>
                 )}
+                <IonFab slot="fixed" vertical="bottom" horizontal="end">
+                    <IonFabButton className="custom-size" color="danger">
+                        <IonIcon icon={openOutline}></IonIcon>
+                        Open in Mail
+                    </IonFabButton>
+
+                </IonFab>
             </IonContent>
         </IonPage>
     );
