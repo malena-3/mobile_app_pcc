@@ -9,7 +9,7 @@
 }
 
 .searchbar-container.show {
-    max-height: 70px; /* Adjust based on your search bar height */
+    max-height: 70px;
     opacity: 1;
 }
 

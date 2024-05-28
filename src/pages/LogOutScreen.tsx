@@ -1,6 +1,4 @@
-//
-//
-// src/pages/LogInScreen.tsx
+
 import React, { useState } from 'react';
 import { IonContent, IonPage, IonInput, IonItem, IonLabel, IonButton, IonHeader, IonToolbar, IonTitle, IonLoading, IonToast } from '@ionic/react';
 import { useHistory } from 'react-router-dom';

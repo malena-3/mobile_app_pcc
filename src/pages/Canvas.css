@@ -1,84 +1,4 @@
 
-/*
-:root {
-    --ion-color-tertiary: #FFCC00;
-    --ion-color-success: #10DC60;
-    --ion-color-primary: #3880FF;
-}
-
-ion-icon {
-    font-size: 20px;
-}
-
-.full-screen-datetime {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    margin: 0;
-    margin-left: 12px;
-    padding: 0;
-
-    --ion-color-primary: #bf2121;
-    --ion-color-primary-rgb: 255, 99, 71;
-    --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-contrast-rgb: 255, 255, 255;
-    --ion-color-primary-tint: #fc9595;
-}
-
-.ion-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-ion-title {
-
-}
-
-.button-wrapper {
-    margin-top: 500px;
-    margin-bottom: 16px;
-    display: flex;
-    justify-content: center;
-    color: #bf2121;
-}
-
-.custom-button {
-    font-size: 18px;
-    text-transform: none;
-}
-
-.full-screen-datetime ion-item {
-    position: relative;
-}
-
-.full-screen-datetime .highlighted-date {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.highlight-tertiary {
-    background-color: var(--ion-color-tertiary);
-
-}
-
-.highlight-success {
-    background-color: var(--ion-color-success);
-}
-
-.highlight-primary {
-    background-color: var(--ion-color-primary);
-}
-*/
-/* Define colors */
 :root {
     --ion-color-tertiary: #FFCC00;  /* Example color */
     --ion-color-success: #10DC60;   /* Example color */
@@ -118,12 +38,12 @@ ion-icon {
 
 /* Styles for ion-title */
 ion-title {
-    /* Add any styles for ion-title here */
+
 }
 
 /* Wrapper for buttons */
 .button-wrapper {
-    margin-top: 500px; /* Adjust this margin as needed */
+    margin-top: 500px;
     margin-bottom: 16px;
     display: flex;
     justify-content: center;
@@ -145,8 +65,8 @@ ion-title {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 10px; /* Adjust dot size as needed */
-    height: 10px; /* Adjust dot size as needed */
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
@@ -163,3 +83,30 @@ ion-title {
 .highlight-primary {
     background-color: var(--ion-color-primary);
 }
+
+.toolbar-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+/* Flex item for select elements */
+.flex-item {
+    display: flex;
+    align-items: center;
+}
+
+.left-dropdown .select-popover {
+    left: auto !important;
+    right: 0 !important;
+    transform-origin: top right;
+}
+
+.left-dropdown .select-popover .popover-content {
+    display: flex;
+    flex-direction: column-reverse;
+}
+

@@ -193,8 +193,7 @@ const CanvasCalender: React.FC = () => {
 
             ionItems?.forEach(item => {
                 const date = item.getAttribute('data-date');
-                // Remove this line to prevent removing existing dots
-                 //item.querySelectorAll('.highlighted-date').forEach(dot => dot.remove());
+
 
                 if (date) {
                     const assignment = filteredAssignments.find(a => a.dueDate === date);
@@ -228,7 +227,6 @@ const CanvasCalender: React.FC = () => {
 
     const handleSelectCourse = (course: string) => {
         setSelectedCourse(course === 'All' ? null : course);
-        // You can add logic here to update the course colors state based on the selected course
     };
 
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Email, getEmails } from '../data/emails';
-import { useHistory } from 'react-router-dom'; // Import useHistory hook
+import { useHistory } from 'react-router-dom';
 
 import {
     IonButton,

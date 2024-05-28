@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Email, getEmail } from '../data/emails';
 import {
@@ -15,10 +16,9 @@ import {
     IonToolbar,
     IonFab,
     IonFabButton,
-    IonFabList,
     useIonViewWillEnter,
 } from '@ionic/react';
-import { personCircle, openOutline} from 'ionicons/icons';
+import { personCircle, openOutline } from 'ionicons/icons';
 import { useParams } from 'react-router';
 import './ViewMail.css';
 
@@ -85,7 +85,6 @@ function ViewMail() {
                 </IonToolbar>
             </IonHeader>
 
-            {/* if email is found, display the email, else display a message */}
             <IonContent fullscreen>
                 {email ? (
                     <>
@@ -103,12 +102,12 @@ function ViewMail() {
                 ) : (
                     <div>Email not found</div>
                 )}
+                <div style={{ paddingBottom: '43px' }}></div>
                 <IonFab slot="fixed" vertical="bottom" horizontal="end">
-                    <IonFabButton className="custom-size" color="danger">
+                    <IonFabButton href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AaSxoQzz3f45iIMTgjy6oiFMQxHgEKt8VqbosIINCpBoaX6J8rC31fVU9LEpMndSnPBTrD29qTva&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1928878794%3A1716494081120473&ddm=0" className="custom-size" color="danger">
                         <IonIcon icon={openOutline}></IonIcon>
                         Open in Mail
                     </IonFabButton>
-
                 </IonFab>
             </IonContent>
         </IonPage>

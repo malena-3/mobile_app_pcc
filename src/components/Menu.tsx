@@ -5,11 +5,6 @@ import {
     IonToolbar,
     IonTitle,
     IonContent,
-    IonList,
-    IonItem,
-    IonLabel,
-    IonMenuToggle,
-    IonIcon,
     IonButtons,
     IonMenuButton
 } from '@ionic/react';
