@@ -91,9 +91,7 @@ ion-title {
 
 }
 
-
-
-/* Flex item for select elements */
+/* For select elements */
 .flex-item {
     display: flex;
     align-items: center;
@@ -110,3 +108,7 @@ ion-title {
     flex-direction: column-reverse;
 }
 
+
+.toggleIcon {
+    --font-color: var(--ion-color-primary);
+}

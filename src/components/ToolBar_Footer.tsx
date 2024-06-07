@@ -31,16 +31,16 @@ function ToolBarFooter() {
         <>
             <IonFooter collapse="fade">
                 <IonToolbar color="danger">
-                    <IonButton onClick={handleMailClick} color="danger" fill="clear">
-                        <IonIcon icon={isActive('/Inbox') ? mailOpen : mailOutline} color="light" />
+                    <IonButton onClick={handleHomeClick} color="danger" fill="clear">
+                        <IonIcon icon={isActive('/HomePage') ? home : homeOutline} color="light" />
                     </IonButton>
 
                     <IonButton onClick={handleCanvasClick} color="danger" fill="clear">
                         <IonIcon icon={isActive('/Canvas') ? create : createOutline} color="light" />
                     </IonButton>
 
-                    <IonButton onClick={handleHomeClick} color="danger" fill="clear">
-                        <IonIcon icon={isActive('/HomePage') ? home : homeOutline} color="light" />
+                    <IonButton onClick={handleMailClick} color="danger" fill="clear">
+                        <IonIcon icon={isActive('/Inbox') ? mailOpen : mailOutline} color="light" />
                     </IonButton>
 
                     <IonButton color="danger" fill="clear">

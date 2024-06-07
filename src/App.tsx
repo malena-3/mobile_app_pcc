@@ -1,3 +1,4 @@
+
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -8,6 +9,7 @@ import HomePage from './pages/HomePage';
 import Canvas from './pages/Canvas';
 import LogOutScreen from './pages/LogOutScreen';
 import CanvasCalendar from "./components/CanvasCalendar";
+import OnboardingProcess from "./components/OnboardingProcess";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -44,6 +46,7 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+
     {/* This is the Ionic React Router component that wraps the entire app */}
     <IonReactRouter>
       <IonSplitPane contentId="main" when={false}>
@@ -74,3 +77,4 @@ const App: React.FC = () => (
 );
 
 export default App;
+

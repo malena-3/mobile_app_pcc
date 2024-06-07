@@ -1,3 +1,7 @@
+//in this slide up menu i think that it should somehow be in contact with the calendar since from the actions
+//in the slide up bar menu is whats choosing the color of the highlighted dates in canvas calendar
+//can you look into this logic please
+
 
 import React, { useRef } from 'react';
 import {
@@ -20,9 +24,13 @@ const CanvasSlideUp: React.FC<CanvasSlideUpProps> = ({ onSelectCourse }) => {
     const modal = useRef<HTMLIonModalElement>(null);
 
     const handleCourseClick = (course: string, color: string) => {
+        console.log('Selected Course:', course);
+        console.log('Selected Course Color:', color);
         onSelectCourse(course, color); // passing course color
         modal.current?.dismiss();
     };
+
+
 
     return (
         <>
